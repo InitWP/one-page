@@ -9,11 +9,13 @@
 		"one-page.php"
     ],
 	"localizeJsVars": {
-		"ajaxUrl": "admin_url( 'admin-ajax.php' )",
-		"homeUrl": "trailingslashit(get_home_url())",
-		"homeUrlRelative": "trailingslashit(get_home_url(null, '', 'relative'))",
-		"isHome": "is_front_page()",
-		"homeId": "get_option( 'page_on_front' )",
-		"siteName": "get_bloginfo( 'name' )"
+		"one-page.js": {
+			"ajaxUrl": "admin_url( 'admin-ajax.php' )",
+			"homeUrl": "trailingslashit(get_home_url())",
+			"homeUrlRelative": "trailingslashit(get_home_url(null, '', 'relative'))",
+			"isHome": "is_front_page()",
+			"homeId": "get_option( 'page_on_front' )",
+			"siteName": "get_bloginfo( 'name' )"
+		}
 	}
 }
