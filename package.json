@@ -1,0 +1,18 @@
+{
+	"name": "One Page",
+	"type": "module",
+	"version": "0.1.0",
+	"description": "One page website with seperate sections consisting of pages loaded by Ajax. Without JavaScript all pages load on their own, which makes them nicely indexable for Google.",
+	"files": [
+		"one-page.js",
+		"one-page.php"
+    ],
+	"localizeJsVars": {
+		"ajaxUrl": "admin_url( 'admin-ajax.php' )",
+		"homeUrl": "trailingslashit(get_home_url())",
+		"homeUrlRelative": "trailingslashit(get_home_url(null, '', 'relative'))",
+		"isHome": "is_front_page()",
+		"homeId": "get_option( 'page_on_front' )",
+		"siteName": "get_bloginfo( 'name' )"
+	}
+}
