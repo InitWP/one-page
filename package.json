@@ -5,6 +5,7 @@
 	"description": "One page website with seperate sections consisting of pages loaded by Ajax. Without JavaScript all pages load on their own, which makes them nicely indexable for Google.",
 	"files": [
 		"one-page.js",
+		"lib/jquery.history.js",
 		"one-page.php"
     ],
 	"localizeJsVars": {
