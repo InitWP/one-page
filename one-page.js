@@ -49,7 +49,7 @@ var NAMESPACECAMELCASEOnePage = (function ($) {
 
 				// loop trough all ajax loaded pages
 				$.each(loadedPages, function (loadedPageId, page) {
-					//console.log('current in loop: ' + index);
+					//console.log('current in loop: ' + loadedPageId);
 					page = $(page);
 
 					// if the ajax loaded page is already present (natively loaded) do not append it
