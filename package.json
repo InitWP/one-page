@@ -5,9 +5,11 @@
 	"description": "One page website with seperate sections consisting of pages loaded by Ajax. Without JavaScript all pages load on their own, which makes them nicely indexable for Google.",
 	"files": [
 		"one-page.js",
-		"lib/jquery.history.js",
 		"one-page.php"
     ],
+	"dependencies": {
+		"jquery.history.js": "https://raw.githubusercontent.com/browserstate/history.js/master/scripts/bundled/html4%2Bhtml5/jquery.history.js"
+	},
 	"localizeJsVars": {
 		"one-page.js": {
 			"ajaxUrl": "admin_url( 'admin-ajax.php' )",
