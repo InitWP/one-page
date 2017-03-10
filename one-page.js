@@ -5,16 +5,16 @@
  *
  */
 
-var NAMESPACEOnePage = (function ($) {
+var NAMESPACECAMELCASEOnePage = (function ($) {
 
 	var firstLoad = true;
 	var History = window.History;
-	var homeUrl = NAMESPACEVars.homeUrl;
-	var homeUrlRelative = NAMESPACEVars.homeUrlRelative;
+	var homeUrl = NAMESPACECAMELCASEVars.homeUrl;
+	var homeUrlRelative = NAMESPACECAMELCASEVars.homeUrlRelative;
 	var homeId = '#post-3';
 	var sectionClass = '.entry';
 	var userIsScrolling = true;
-	if (NAMESPACEVars.wpDebug) {
+	if (NAMESPACECAMELCASEVars.wpDebug) {
 		History.options.debug = true;
 	}
 	var onLoadCallbacks = [];
@@ -29,18 +29,18 @@ var NAMESPACEOnePage = (function ($) {
 		var nativeArticleParent = $('#' + nativeArticleId).parent();
 
 		// Hide existing article (except on homepage) to make page loading appear smoother
-		if (!NAMESPACEVars.isHome) {
+		if (!NAMESPACECAMELCASEVars.isHome) {
 			$('#' + nativeArticleId).css('visibility', 'hidden');
 		}
 
 		// Get all the content!
 		$.ajax({
-				url: NAMESPACEVars.ajaxUrl,
+				url: NAMESPACECAMELCASEVars.ajaxUrl,
 				method: 'POST',
 				dataType: 'json',
 				data: {
 					action: 'NAMESPACE_get_all_pages',
-					is_home: NAMESPACEVars.isHome
+					is_home: NAMESPACECAMELCASEVars.isHome
 				}
 			})
 			// when done start insertion
@@ -53,7 +53,7 @@ var NAMESPACEOnePage = (function ($) {
 					page = $(page);
 
 					// if the ajax loaded page is already present (natively loaded) do not append it
-					if (loadedPageId === nativeArticleId || (NAMESPACEVars.isHome && loadedPageId === 'post-' + NAMESPACEVars.homeId)) {
+					if (loadedPageId === nativeArticleId || (NAMESPACECAMELCASEVars.isHome && loadedPageId === 'post-' + NAMESPACECAMELCASEVars.homeId)) {
 						//console.log(loadedPageId + ' is a native article');
 						$('#' + nativeArticleId).css('visibility', 'visible');
 						insertLocation = 'afterNativeArticle';
@@ -159,7 +159,7 @@ var NAMESPACEOnePage = (function ($) {
 
 		// find the entry which matches with currentUrl
 		var currentEntry = $('.entry[data-url="' + currentUrl + '"]');
-		var currentEntryTitle = $(currentEntry).data('title') + ' - ' + NAMESPACEVars.siteName;
+		var currentEntryTitle = $(currentEntry).data('title') + ' - ' + NAMESPACECAMELCASEVars.siteName;
 		if (currentEntry.length) {
 			if (currentUrl === homeUrl) {
 				scrollTo = 0;
@@ -238,7 +238,7 @@ var NAMESPACEOnePage = (function ($) {
 			$(sectionClass).each(function (index, elem) {
 				if (isScrolledIntoView($(elem))) {
 					var pageUrl = $(this).data('url');
-					var title = $(this).data('title') + ' - ' + NAMESPACEVars.siteName;
+					var title = $(this).data('title') + ' - ' + NAMESPACECAMELCASEVars.siteName;
 					History.replaceState({
 						pageUrl: pageUrl,
 						scrollToSection: false
@@ -267,4 +267,4 @@ var NAMESPACEOnePage = (function ($) {
 
 })(jQuery);
 
-NAMESPACEOnePage.init();
+NAMESPACECAMELCASEOnePage.init();
