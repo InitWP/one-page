@@ -9,12 +9,12 @@ var NAMESPACEOnePage = (function ($) {
 
 	var firstLoad = true;
 	var History = window.History;
-	var homeUrl = NAMESPACEData.homeUrl;
-	var homeUrlRelative = NAMESPACEData.homeUrlRelative;
+	var homeUrl = NAMESPACEVars.homeUrl;
+	var homeUrlRelative = NAMESPACEVars.homeUrlRelative;
 	var homeId = '#post-3';
 	var sectionClass = '.entry';
 	var userIsScrolling = true;
-	if (NAMESPACEData.wpDebug) {
+	if (NAMESPACEVars.wpDebug) {
 		History.options.debug = true;
 	}
 	var onLoadCallbacks = [];
@@ -29,18 +29,18 @@ var NAMESPACEOnePage = (function ($) {
 		var nativeArticleParent = $('#' + nativeArticleId).parent();
 
 		// Hide existing article (except on homepage) to make page loading appear smoother
-		if (!NAMESPACEData.isHome) {
+		if (!NAMESPACEVars.isHome) {
 			$('#' + nativeArticleId).css('visibility', 'hidden');
 		}
 
 		// Get all the content!
 		$.ajax({
-				url: NAMESPACEData.ajaxUrl,
+				url: NAMESPACEVars.ajaxUrl,
 				method: 'POST',
 				dataType: 'json',
 				data: {
 					action: 'NAMESPACE_get_all_pages',
-					is_home: NAMESPACEData.isHome
+					is_home: NAMESPACEVars.isHome
 				}
 			})
 			// when done start insertion
@@ -53,7 +53,7 @@ var NAMESPACEOnePage = (function ($) {
 					page = $(page);
 
 					// if the ajax loaded page is already present (natively loaded) do not append it
-					if (loadedPageId === nativeArticleId || (NAMESPACEData.isHome && loadedPageId === 'post-' + NAMESPACEData.homeId)) {
+					if (loadedPageId === nativeArticleId || (NAMESPACEVars.isHome && loadedPageId === 'post-' + NAMESPACEVars.homeId)) {
 						//console.log(loadedPageId + ' is a native article');
 						$('#' + nativeArticleId).css('visibility', 'visible');
 						insertLocation = 'afterNativeArticle';
@@ -159,7 +159,7 @@ var NAMESPACEOnePage = (function ($) {
 
 		// find the entry which matches with currentUrl
 		var currentEntry = $('.entry[data-url="' + currentUrl + '"]');
-		var currentEntryTitle = $(currentEntry).data('title') + ' - ' + NAMESPACEData.siteName;
+		var currentEntryTitle = $(currentEntry).data('title') + ' - ' + NAMESPACEVars.siteName;
 		if (currentEntry.length) {
 			if (currentUrl === homeUrl) {
 				scrollTo = 0;
@@ -238,7 +238,7 @@ var NAMESPACEOnePage = (function ($) {
 			$(sectionClass).each(function (index, elem) {
 				if (isScrolledIntoView($(elem))) {
 					var pageUrl = $(this).data('url');
-					var title = $(this).data('title') + ' - ' + NAMESPACEData.siteName;
+					var title = $(this).data('title') + ' - ' + NAMESPACEVars.siteName;
 					History.replaceState({
 						pageUrl: pageUrl,
 						scrollToSection: false
