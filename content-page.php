@@ -2,7 +2,7 @@
 /**
  * Template part for displaying pages content in page.php.
  *
- * Replace the
+ * Usage: Replace the homepage and content page ids for your own
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

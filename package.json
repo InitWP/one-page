@@ -2,7 +2,7 @@
 	"name": "One Page",
 	"type": "module",
 	"version": "0.1.0",
-	"description": "One page website with seperate sections consisting of pages loaded by Ajax. Without JavaScript all pages load on their own, which makes them nicely indexable for Google.",
+	"description": "One page website with seperate sections consisting of pages loaded by Ajax. Without JavaScript all pages load on their own, which makes them nicely indexable by Google.",
 	"files": [
 		"one-page.js",
 		"one-page.php"
@@ -19,5 +19,12 @@
 			"homeId": "get_option( 'page_on_front' )",
 			"siteName": "get_bloginfo( 'name' )"
 		}
+	},
+	"themeSpecificFiles": {
+		"content-page.php": "template-parts/content-page.php"
+	},
+	"supportedThemes": {
+		"slnm-base": "https://github.com/InitWP/slnm-base",
+		"underscores" : "https://github.com/Automattic/_s"
 	}
 }
