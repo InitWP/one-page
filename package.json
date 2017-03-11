@@ -21,7 +21,7 @@
 		}
 	},
 	"themeSpecificFiles": {
-		"content-page.php": "template-parts/content-page.php"
+		"content-page.php": "template-parts/"
 	},
 	"supportedThemes": {
 		"slnm-base": "https://github.com/InitWP/slnm-base",
