@@ -10,7 +10,7 @@
  */
 
 // ID of the homepage page
-$homepage_id = 3
+$homepage_id = 3;
 // The following page will be loaded together with the homepage.
 // Usefull when the homepage has no content, e.g. only an image or slider. The content will make the homepage better SEO wise.
 // Also is will provide more content to fill the space above the fold, which prevents the visible loading of the other pages below the fold.
