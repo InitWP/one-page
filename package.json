@@ -26,5 +26,14 @@
 	"supportedThemes": {
 		"slnm-base": "https://github.com/InitWP/slnm-base",
 		"underscores" : "https://github.com/Automattic/_s"
+	},
+	"actions": {
+		"insertAfter": {
+			"searchvalue": "On DOM ready",
+			"newValue": "NAMESPACECAMELCASEOnePage.onLoad(NAMESPACECAMELCASENavigation.init);",
+			"files": [
+				"js/scripts.js"
+			]
+		}
 	}
 }
