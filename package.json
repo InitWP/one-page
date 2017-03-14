@@ -30,7 +30,7 @@
 	"actions": {
 		"insertAfter": {
 			"searchValue": "On DOM ready",
-			"newValue": "		NAMESPACECAMELCASEOnePage.onLoad(NAMESPACECAMELCASENavigation.init);",
+			"newValue": "\t\tNAMESPACECAMELCASEOnePage.onLoad(NAMESPACECAMELCASENavigation.init);",
 			"files": [
 				"js/scripts.js"
 			]
