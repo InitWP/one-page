@@ -29,7 +29,7 @@
 	},
 	"actions": {
 		"insertAfter": {
-			"searchvalue": "On DOM ready",
+			"searchValue": "On DOM ready",
 			"newValue": "NAMESPACECAMELCASEOnePage.onLoad(NAMESPACECAMELCASENavigation.init);",
 			"files": [
 				"js/scripts.js"
