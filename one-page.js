@@ -140,9 +140,9 @@ var NAMESPACECAMELCASEOnePage = (function ($) {
 	});
 
 	function activateCurrentMenuItems() {
-		$('.mainNavigation--menu li').removeClass('current-menu-item');
+		$('.mainNavigation--menu li').removeClass('is-active');
 		$('.mainNavigation--menu').each(function (index) {
-			$('li', this).eq(index).addClass('current-menu-item');
+			$('li', this).eq(index).addClass('is-active');
 		});
 	}
 	onLoad(activateCurrentMenuItems);
